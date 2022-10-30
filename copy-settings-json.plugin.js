@@ -10,7 +10,7 @@
 
 (function() {
 	
-	const ID_PREFIX="copy-settings";
+    const ID_PREFIX="copy-settings-json";
 
     const popupContainer = document.createElement('div');
     popupContainer.id = `${ID_PREFIX}-popup`;
