@@ -6,4 +6,4 @@
 
 
 DateFoldersDate= new Date();
-sessionId = DateFoldersDate.toISOString();
+sessionId = DateFoldersDate.toISOString().replaceAll(/:/g, '-');
