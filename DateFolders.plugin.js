@@ -6,4 +6,4 @@
 
 
 DateFoldersDate= new Date();
-sessionId = d.toISOString() + Date.now();
+sessionId = DateFoldersDate.toISOString() + Date.now();
