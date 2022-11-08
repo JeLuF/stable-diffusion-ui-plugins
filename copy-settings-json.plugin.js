@@ -1,6 +1,6 @@
 /**
  * Copy Settings plugin
- * v.1.0, 10/30/2022
+ * v.1.1, 2022-11-08
  * 
  * Copy a json representation of the settings of this image to the clipboard
  * 
@@ -10,7 +10,7 @@
 
 (function() {
 	
-    const ID_PREFIX="copy-settings-json";
+	const ID_PREFIX="copy-settings";
 
     const popupContainer = document.createElement('div');
     popupContainer.id = `${ID_PREFIX}-popup`;
@@ -74,9 +74,7 @@
 	PLUGINS['IMAGE_INFO_BUTTONS'].push({
 		text: 'Copy settings (JSON)',
 		on_click: function(origRequest, image) {
-
-			let userRequest = getCurrentUserRequest();
-			copyTextToClipboard(JSON.stringify(userRequest));
+			copyTextToClipboard(JSON.stringify(origRequest, undefined, 4));
 		},
 		filter: function(origRequest, image) {
 			return true;
